@@ -56,8 +56,13 @@
             <div class="about-content">
                 <h2 class="greeting">Who I am </h2>
                 <p>
-                    Brief introduction about yourself. Highlight your background, 
-                    skills, and what you are passionate about.
+                    I have a master's degree in Software Engineering from the École de Technologie Supérieure (ÉTS) and a bachelor's degree in the Computer Science from National University of Computer and Emerging Science (FAST). I kicked off my professional career as a mobile application developer working for a local start-up, UHF Solutions.
+
+                    My next role was in Dubai (UAE), where I spent one year working for a client, Noor Bank. I was responsible for their middleware implementation. I learned a lot from this role, like how to interact with non-technical and technical clients. How to perform alpha/beta testing, and anything bad that can happen, will only happen on Fridays and ruin our weekend. My next move was the continuation of my current role, which took me from the UAE to Bahrain. A very nice and cosy island in the middle of Saudi Arabia and Qatar. Here I had more responsibilities as I was promoted from Software Engineer to Senior Software Engineer. I was leading a small team of developers and handling on-site compliance projects for the bank. We successfully certified and launched contactless payments all over the nation. Our team was also responsible for implementing biometric payment systems. We also relaunched the mobile and web banking applications.
+                    
+                    This was 2020, the year that changed the world for better or for worse. Like countless others, I found myself confined to my home. I always wanted to do higher education, and it seemed like the perfect time to take the leap. I could continue working remotely and complete my Master's degree at the same time. This is how I find myself in Canada, full of excitment for the next chapter of my life. Currently, I am in this city of baguettes, maple syrup, and excessively polite hockey fans, embracing the charms of my current home. Who knows where life will take me next? After all as they say, life is an unpredictable comedy, and I am just along for the ride.
+                    
+                    I am an imaginative guy and a huge sci-fi nerd, and I love everything about it. When I am not programming, I am attending different meetups, comicons, discussing movies and series, or working on my photograpy and vidography skills.
                 </p>
             </div>
             <!-- Additional content... -->
@@ -79,12 +84,12 @@
                 </p>
             </div>
             
-            <div class="skill-card">
+            <!-- <div class="skill-card">
                 <h3>AI Developer</h3>
                 <p>Developing intelligent solutions using machine learning and data analysis.</p>
-            </div>
+            </div> -->
             <div class="skill-card">
-                <h3>Blockchain Developer</h3>
+                <h3>Blockchain Development</h3>
                 <p>Implementing secure, decentralized applications and smart contracts.</p>
             </div>
             </div>
@@ -147,11 +152,27 @@
             <a href="https://www.linkedin.com/in/aamarshahzad/" class="social-link">LinkedIn</a>
             <a href="https://github.com/aamar-shahzad"  class="social-link">GitHub</a>
             <!-- More social links -->
-            <p>Copyright &copy; 2024 Aamar Shahzad</p>
+            <p>Copyright &copy;  <p id="current-date">  </p>   Aamar Shahzad</p>
         </div>
     </footer>
 
 </body>
 
+<script>
+    // Get the current timestamp in milliseconds
+    const timestamp = Date.now();
+
+    // Create a Date object from the timestamp
+    const currentDate = new Date(timestamp);
+
+    // Get the individual components of the date and time
+    const year = currentDate.getFullYear();
+
+    // Format the date and time as a string
+    const formattedDate = `${year}  `;
+
+    // Insert the formatted date into the HTML element
+    document.getElementById("current-date").textContent = formattedDate;
+</script>
 
 </html>
