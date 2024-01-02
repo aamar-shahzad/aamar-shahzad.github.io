@@ -230,9 +230,11 @@ footer {
     .skills-row{
         display: flex;
         flex-direction: row;
+        width: 100;
     }
     .skill-card {
         width: 100%; /* Adjust for very small screens */
+        margin: 0;
     }
     .projects-row{
         flex-wrap: wrap;
