@@ -188,7 +188,7 @@ footer {
 
     .about-content, .profile-card {
         width: 100%;
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     .profile-card {
@@ -237,6 +237,10 @@ footer {
     .projects-row{
         flex-wrap: wrap;
         width: 100;
+    }
+    .profile-card{
+        margin: 0;
+        width: 100%;
     }
     #projects .project-card {
         background: white;
