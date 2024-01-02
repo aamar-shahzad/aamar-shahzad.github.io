@@ -1,0 +1,349 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+:root {
+    --primary-color: #6e8efb;
+    --secondary-color: #a777e3;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Darker text for better readability */
+    background-color: #f8f8f8; /* Light background */
+    margin-top: 70px;
+}
+header {
+    position: fixed; /* Fixes the header at the top */
+    width: 100%; /* Ensures the header spans the entire width of the viewport */
+    top: 0; /* Aligns the header to the top of the viewport */
+    left: 0; /* Aligns the header to the left of the viewport */
+    z-index: 1000; /* Ensures the header stays above other content */
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Background color or gradient of your header */
+}
+section {
+    padding: 20px;
+    width: 100%; /* Ensures the section takes full width */
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+}
+
+h1, h2, .greeting {
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a; /* Slightly darker color for headings */
+}
+
+#about, #contact {
+    background: #f4f4f4;
+}
+/* Dark Theme */
+.dark-theme {
+    /* Add your dark theme styles here */
+    background-color: #333;
+    color: #fff;
+}
+
+/* Normal Theme */
+.normal-theme {
+    /* Add your normal theme styles here */
+    background-color: #fff;
+    color: #333;
+}
+
+
+#projects {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+#projects h2 {
+    margin-bottom: 30px; /* Adds space below the Projects heading */
+}
+
+
+#projects .project-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px; /* Adds space between project cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Center each card if the design requires */
+    width: 30%; /* Adjust the width as needed for smaller cards */
+    margin: 10px; /* Adjust margin for spacing */
+}
+
+#projects .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+.social-link {
+    margin: 0 10px;
+    color: #0077B5; /* Example: LinkedIn Blue */
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #005691; /* Darker shade for hover effect */
+}
+
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    max-width: 1060px; /* Sets a max width for the content */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px; /* Adjust as necessary */
+}
+.profile-card {
+    width: 400px; /* Reduced width */
+    height: auto; /* Height adjusts automatically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Card Image Styling */
+/* Profile Image Styling */
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+
+/* Additional Content in Profile Card */
+.profile-card-content {
+    padding: 15px; /* Padding inside the card for any additional content */
+}
+.greeting {
+    font-size: 4em; /* Larger text size for the greeting */
+    margin-bottom: 0.5em;
+}
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
+@media (max-width: 960px) {
+    .container {
+        padding: 0 15px; /* Adds padding on smaller screens */
+    }
+}
+@media (max-width: 768px) {
+    .greeting {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-content, .profile-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile-card {
+        order: -1; /* This will place the image above the text on smaller screens */
+    }
+
+    .greeting {
+        font-size: 1.5em; /* Slightly smaller text for smaller screens */
+    }
+}
+
+header, footer {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+}
+h1, h2, .greeting {
+    font-family: 'Montserrat', sans-serif;
+    /* Other existing styles... */
+}
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers the navbar content container */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 10px 0;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 960px; /* Same max width as the body content for alignment */
+    margin: 0 auto; /* Centers the navbar content container */
+}
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    /* Add here any additional styles for mobile view */
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background: #6e8efb; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.profile-img, .project-thumbnail {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Styling for the titles in the 'Who I Am' and 'What I Do' sections */
+#who-i-am h2, #what-i-do h2 {
+    font-size: 2.5em; /* Larger size for the titles */
+    margin-bottom: 20px; /* Adds space below the title */
+    /* Additional styles (color, font-weight, etc.) can be added here */
+}
+#contact .btn {
+    /* Custom styles for the email button */
+    background-color: #4CAF50; /* Example: green background */
+    color: white;
+    /* Other styling properties as needed */
+}
+#contact .container {
+    text-align: center; /* Center-aligns the content */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Aligns children in the center */
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 15px; /* Adds space below the title */
+    width: 100%; /* Title takes full width */
+}
+
+#contact p {
+    margin-bottom: 10px; /* Adds space between the paragraph and the button */
+}
+
+
+.skills-row {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between cards */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.skill-card {
+    background: #f4f4f4; /* Background color */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 24%; /* Adjust based on desired width, accounting for margin */
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #333; /* Title color */
+    /* Additional styling for the title */
+}
+
+.skill-card p {
+    color: #666; /* Description text color */
+    /* Additional styling for the description */
+}
+
+@media (max-width: 768px) {
+    .skill-card {
+        width: 50%; /* Adjust for smaller screens */
+    }
+}
