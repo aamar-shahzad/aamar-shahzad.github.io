@@ -15,23 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body>   
     <header>
         <nav class="navbar">
             <div class="navbar-content">
-            <div id="logo" class="logo">Aamar
+                <div id="logo" class="logo">Aamar</div>
+    
+                <!-- Menu Icon -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Organizations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Organizations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            </div>
-            
         </nav>
     </header>
     
-
     <section id="about">
         <div class="container">
             <div class="about-content">
@@ -182,6 +187,13 @@
 
     // Insert the formatted date into the HTML element
     document.getElementById("current-date").textContent = formattedDate;
+    function toggleMenu() {
+        var menuIcon = document.querySelector('.menu-icon');
+        var links = document.querySelector('.nav-links');
+
+        menuIcon.classList.toggle('active');
+        links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    }
 </script>
 
 </html>

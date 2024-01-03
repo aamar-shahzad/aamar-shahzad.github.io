@@ -163,7 +163,44 @@ footer {
     font-size: 4em;
     margin-bottom: 0.5em;
 }
+.menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Adjust the position as needed */
+    right: 20px; /* Position to the right */
+    width: 30px; /* Width of the hamburger icon */
+    height: 25px; /* Height of the hamburger icon */
+    background: transparent;
+    border: none;
+    outline: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Rotate first bar for close icon */
+.menu-icon.active span:first-child {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+/* Hide second bar for close icon */
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Rotate third bar for close icon */
+.menu-icon.active span:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
 
 @media (max-width: 960px) {
     .container {
@@ -179,7 +216,12 @@ footer {
     .greeting {
         font-size: 2em;
     }
-
+    .menu-icon {
+        display: flex;
+    }
+    body{
+        margin-top: 130px;
+    }
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -202,9 +244,19 @@ footer {
         width: 100%;
         margin: 10px;
     }
-    .navbar .logo, .nav-links, .nav-links li, .nav-links a {
-        font-size: smaller; /* Smaller font size for navbar elements */
-        
+    .nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .navbar-content {
+        justify-content: space-between;
     }
 
     .skill-card {
@@ -336,6 +388,7 @@ header, footer {
     .nav-links {
         display: none;
     }
+    
 }
 
 .btn {
@@ -400,3 +453,5 @@ header, footer {
 #contact p {
     margin-bottom: 10px;
 }
+
+
