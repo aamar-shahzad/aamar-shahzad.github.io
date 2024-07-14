@@ -13,7 +13,7 @@ export const DATA = {
   summary:"I am a software engineer self learner, I love to build things and help people. I have a passion for learning and sharing my knowledge with others a public as possible. I am a full stack developer with experience in building web applications using React, Next.js, Node.js, and Python. I have a passion for building and scaling products that solve real-world problems.",
   photography: [
     {
-      title : "me",
+   
       url: `horse.jpeg`,
       width: 600,
       height: 400,
@@ -22,16 +22,16 @@ export const DATA = {
       
     },
     {
-      title : "park",
+    
       url: `park.jpeg`,
       width: 600,
-      height: 500,
+      height: 400,
       alt: "park",
       isLandscap: true,
       
     },
     {
-      title : "forest",
+      
       url: `forest.jpeg`,
       width: 600,
       height: 400,
@@ -40,7 +40,7 @@ export const DATA = {
       
     },
     {
-      title : "city",
+     
       url: `city.jpeg`,
       width: 600,
       height: 400,
@@ -48,26 +48,9 @@ export const DATA = {
       isLandscap: true,
 
     },
+ 
     {
-      title : "Sunset",
-      url: `sunset.jpeg`,
-      width: 600,
-      height: 300,
-      alt: "sun set",
-      isLandscap: true,
-      
-    },
-    // {
-    //   title : "lake",
-    //   url: `lake.jpeg`,
-    //   width: 600,
-    //   height: 400,
-    //   alt: "lake",
-    //   isLandscap: true,
-      
-    // },
-    {
-      title : "cityView",
+     
       url: `cityView.jpeg`,
       width: 600,
       height: 400,
@@ -75,6 +58,20 @@ export const DATA = {
       isLandscap: true,
       
     },
+    {
+    
+      url: `sunset.jpeg`,
+      width: 600,
+      height: 300,
+      alt: "sun set",
+      isLandscap: true,
+      
+    },
+   
+    
+ 
+   
+  
  
 
   ],
@@ -213,6 +210,23 @@ export const DATA = {
       start: "2023",
       end: "2024",
     },
+    {
+      school: "Université de Montréal",
+      href: "https://www.umontreal.ca/",
+      degree: "Course work in Blockchain Application",
+      logoUrl: "/udem.png",
+      start: "January 2024",
+      end: "April 2024",
+    },
+    {
+      school: "Concordia University",
+      href: "https://www.concordia.ca/",
+      degree: "Course work in Applied Machine Learning & Web programming",
+      logoUrl: "/concordia.png",
+      start: "September 2023",
+      end: "September 2024",
+    },
+
     {
       school: "Quaid-i-Azam University Islamabad, Pakistan",
       href: "https://qau.edu.pk/",
