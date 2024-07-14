@@ -1,8 +1,9 @@
-import { getPost, getBlogPosts } from "@/data/blog";
+import { getPost, getAllPosts } from "@/data/blog"; // Assuming you have a function to get all posts
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import path from "path";
 import { Suspense } from "react";
 
 export async function generateMetadata({
@@ -13,10 +14,6 @@ export async function generateMetadata({
   };
 }): Promise<Metadata | undefined> {
   let post = await getPost(params.slug);
-
-  if (!post) {
-    return;
-  }
 
   let {
     title,
@@ -51,11 +48,9 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map((post: { slug: string }) => ({
-    params: {
-      slug: post.slug,
-    },
+  let posts = await getAllPosts(path.join(process.cwd(), "content")); // Assuming getAllPosts fetches all the posts
+  return posts.map(post => ({
+    slug: post.slug,
   }));
 }
 
