@@ -49,6 +49,25 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+      <section id="photography">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Photography</h2>
+          </BlurFade>
+          <div className="columns-2 gap-4 sm:columns-3">
+        {DATA.photography.map((imageUrl, idx) => (
+          <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+            <img
+              className="mb-4 size-full rounded-lg object-contain"
+              src={imageUrl.url}
+              alt={`Random stock image ${idx + 1}`}
+            />
+          </BlurFade>
+        ))}
+      </div>
+        
+        </div>
+        </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>

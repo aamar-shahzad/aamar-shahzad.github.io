@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
+import { title } from "process";
 
 export const DATA = {
   name: "Aamar Shahzad",
@@ -8,9 +9,76 @@ export const DATA = {
   location: "Montreal, Canada",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Software Engineer. I love building things and helping people with technology. ",
+    "Software Engineer. I love building things and helping people with technology. I like photography, traveling, and learning new things.",
   summary:"I am a software engineer self learner, I love to build things and help people. I have a passion for learning and sharing my knowledge with others a public as possible. I am a full stack developer with experience in building web applications using React, Next.js, Node.js, and Python. I have a passion for building and scaling products that solve real-world problems.",
-  avatarUrl: "/me.png",
+  photography: [
+    {
+      title : "me",
+      url: `horse.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "me",
+      isLandscap: true,
+      
+    },
+    {
+      title : "park",
+      url: `park.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "park",
+      isLandscap: true,
+      
+    },
+    {
+      title : "forest",
+      url: `forest.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "forest",
+      isLandscap: true,
+      
+    },
+    {
+      title : "city",
+      url: `city.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "city",
+      isLandscap: true,
+
+    },
+    {
+      title : "Sunset",
+      url: `sunset.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "sun set",
+      isLandscap: true,
+      
+    },
+    // {
+    //   title : "lake",
+    //   url: `lake.jpeg`,
+    //   width: 600,
+    //   height: 400,
+    //   alt: "lake",
+    //   isLandscap: true,
+      
+    // },
+    {
+      title : "cityView",
+      url: `cityView.jpeg`,
+      width: 600,
+      height: 400,
+      alt: "city view",
+      isLandscap: true,
+      
+    },
+ 
+
+  ],
+  avatarUrl: "/me.jpeg",
   skills: [
     "React",
     "Next.js",
@@ -78,7 +146,7 @@ export const DATA = {
       // },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:s_aamar@yahoo.com",
         icon: Icons.email,
 
         navbar: false,
