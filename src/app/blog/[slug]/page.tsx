@@ -1,4 +1,4 @@
-import { getPost } from "@/data/blog";
+import { getPost, getBlogPosts } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -13,6 +13,10 @@ export async function generateMetadata({
   };
 }): Promise<Metadata | undefined> {
   let post = await getPost(params.slug);
+
+  if (!post) {
+    return;
+  }
 
   let {
     title,
@@ -44,6 +48,15 @@ export async function generateMetadata({
       images: [ogImage],
     },
   };
+}
+
+export async function generateStaticParams() {
+  const posts = await getBlogPosts();
+  return posts.map((post: { slug: string }) => ({
+    params: {
+      slug: post.slug,
+    },
+  }));
 }
 
 export default async function Blog({
